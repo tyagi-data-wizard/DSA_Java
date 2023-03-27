@@ -8,18 +8,22 @@ public class DV30ResizeArray {
 
 
 	public static void printArray(int[] arr) {
-		for(int i=0;i<arr.length;i++) {
-			System.out.print(arr[i]+" ");
+		for (int j : arr) {
+			System.out.print(j + " ");
 		}
 	}
 
 	
 	public int[] resizeArray(int[] arr, int capacity) {
 		int[] temp = new int[capacity];
-		
+
+		/*
 		for(int i=0;i<arr.length;i++) {
 			temp[i] =arr[i];
 		}
+		 */
+		//using this instead of for logic
+		System.arraycopy(arr, 0, temp, 0, arr.length);
 		
 		return temp;
 		
