@@ -49,7 +49,7 @@ public class DV34Palindrome {
 		boolean flag = obj.checkPalindrome(word);
 		
 		System.out.println("Palindrome or not : "+flag);
-		
+		System.out.println("Code Ended");
 		
 	}
 }
