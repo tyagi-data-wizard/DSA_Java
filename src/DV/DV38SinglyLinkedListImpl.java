@@ -14,6 +14,23 @@ public class DV38SinglyLinkedListImpl {
 
     }
 
+    //DV41
+    public int size(){
+        if(head == null){
+            return 0;
+        }
+        int length = 0;
+        ListNode current = head;
+        while(current!=null){
+            System.out.print(current.data+" ");
+            length++;
+            current=current.next;
+        }
+
+        return length;
+    }
+
+    //DV39
     public void display(){
         ListNode current = head;
         while(current!=null){
@@ -38,10 +55,12 @@ public class DV38SinglyLinkedListImpl {
         second.next = third;
         third.next = fourth;
 
+        //DV39
         sll.display();
 
         //DV41
         System.out.println("\nThe length of SLL is : "+sll.size());
+
 
     }
 }
