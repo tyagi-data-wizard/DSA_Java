@@ -14,9 +14,19 @@ public class DV38SinglyLinkedListImpl {
 
     }
 
+    public void display(){
+        ListNode current = head;
+        while(current!=null){
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println("LinkedList has ended");
+    }
+
 
     public static void main(String[] args) {
 
+        //10 -> 1 -> 8 -> 11
         DV38SinglyLinkedListImpl sll = new DV38SinglyLinkedListImpl();
         sll.head = new ListNode(10);
         ListNode second = new ListNode(1);
@@ -28,7 +38,10 @@ public class DV38SinglyLinkedListImpl {
         second.next = third;
         third.next = fourth;
 
+        sll.display();
 
+        //DV41
+        System.out.println("\nThe length of SLL is : "+sll.size());
 
     }
 }
